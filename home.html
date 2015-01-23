@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>habit signatures</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+</style>
+</head>
+
+<body>
+<div id='intro'>
+<h3>Create your dynamic, habit-centered email signatures in less than 5 minutes (for coach.me members).</h3> 
+<p>After experimenting with habits for years, I noticed that accountability is key to change a habit, but is always lacking.<br> 
+Friends and family are too busy in their lives for such a commitment, and virtual accountability is not the same as people you know IRL.<br>
+Adding your progress at changing habits in the email signature, make email receivers potential accountants<br>
+This is a tool I made for myself. I am not related with Coach.me. Feel free to use, at your own risk. Feedback is welcome.</p>
+</div>
+
+<form action="#" method="post" name="form1">
+<p>Enter your Coach.me profile URL:</p>
+<p>Dutch: you can choose any of the following as to test<br>
+https://www.coach.me/users/4c31cbb1193ac3e17d05//activity<br>
+https://www.coach.me/users/deadede879bfa27d1234//activity<br>
+https://www.coach.me/users/8d5ba3712b5fe8251524//activity<br></p>
+<!-- <input type="text" name="userCoachmeURL"> alternative to textarea-->
+<textarea name="userCoachmeURL" cols="50"></textarea> <!-- as to keep text inside of box: <?php echo htmlspecialchars($_POST['userCoachmeURL']);?> -->
+<input type="submit" name="submit" value="Get Habits!"><br>
+</form> 
+
+<!-- <img src="test.jpg" alt="dude" style="width:304px;height:228px"><br>  -->
+
+<form action='#' method='post' name='form'> <!-- <?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> -->
+<?php include 'get_plans.php'; ?><br>
+</form>
+
+<!-- <img src="test.php" alt="Getting closer! :)" width="400" height="20"> it must be PHP or it is not dynamic -->
+
+</body>
+
+</html>
