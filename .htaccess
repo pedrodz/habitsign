@@ -1,0 +1,9 @@
+# to use PHP in HTML
+# GoDaddy config: http://sagarnangare.com/parse-html-as-php-using-htaccess-file-on-godaddy/
+AddHandler fcgid-script .html
+FCGIWrapper /usr/local/cpanel/cgi-sys/php5 .html
+
+# this is as to trick the browser that php is a png:
+# http://stackoverflow.com/questions/25574086/random-signature-in-gmail
+RewriteEngine On     
+RewriteRule ^signature.png signature.php [L]
