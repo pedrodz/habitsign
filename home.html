@@ -6,38 +6,68 @@
 <title>habit signatures</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" >
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- import jQuery for the Slide Toggle -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+
+<!-- Adding CSS inside HTML | Inspired by: http://mnmlist.com/theme/ -->
 <style type="text/css">
+body {  background: #fff; 
+	font-family: Hoefler Text, "Times New Roman", Times, serif;
+	color: #333;
+        line-height: 30px;
+        margin-top:60px; margin-left:64px; margin-right:14px; margin-bottom:0px;}
+h2 {	font-family: Helvetica, sans-serif; 
+	font-size: 1.5em; 
+	color:#333; 
+	line-height:26px; 
+	font-weight:normal;
+	text-decoration: none;}
+p  {	line-height: 30px; 
+	margin:30px auto; 
+	text-indent: 0px;}
+a {text-decoration: none;}
+a:link {color: #333; text-decoration: none;}
+a:visited {color: #333; text-decoration: none;}
+a:hover {color: #999; text-decoration: none;}
+
+<!-- by default (in theory) this hides #panel: -->
+#panel { display:none;}
+
 </style>
+
 </head>
 
 <body>
 <div id='intro'>
-<h3>Create your dynamic, habit-centered email signatures in less than 5 minutes (for coach.me members).</h3> 
-<p>After experimenting with habits for years, I noticed that accountability is key to change a habit, but is always lacking.<br> 
-Friends and family are too busy in their lives for such a commitment, and virtual accountability is not the same as people you know IRL.<br>
-Adding your progress at changing habits in the email signature, make email receivers potential accountants<br>
-This is a tool I made for myself. I am not related with Coach.me. Feel free to use, at your own risk. Feedback is welcome.</p>
+<h3><a href="http://pedrodz.com/habitsign/"> Habit Changing Email Signatures</a></h3>
+<h4>Display your <a href="http://www.coach.me">Coach.me</a> habit progress in your emails.</h4> 
+<!-- <p>After experimenting with habits for years, I noticed that accountability is key to change a habit, but is always lacking.<br> 
+Friends and family are too busy in their lives for such a commitment, and virtual accountability is not the same as people you know IRL.<br> -->
+
 </div>
-
+<!--
 <form action="#" method="post" name="form1">
-<p>Enter your Coach.me profile URL:</p>
-<p>Dutch: you can choose any of the following as to test<br>
-https://www.coach.me/users/4c31cbb1193ac3e17d05//activity<br>
-https://www.coach.me/users/deadede879bfa27d1234//activity<br>
-https://www.coach.me/users/8d5ba3712b5fe8251524//activity<br></p>
+<p>Insert your Coach.me profile URL:<br>
+--> 
 <!-- <input type="text" name="userCoachmeURL"> alternative to textarea-->
-<textarea name="userCoachmeURL" cols="50"></textarea> <!-- as to keep text inside of box: <?php echo htmlspecialchars($_POST['userCoachmeURL']);?> -->
-<input type="submit" name="submit" value="Get Habits!"><br>
-</form> 
-
-<!-- <img src="test.jpg" alt="dude" style="width:304px;height:228px"><br>  -->
+<!-- as to keep text inside of box: <?php echo htmlspecialchars($_POST['userCoachmeURL']);?> -->
+<!--
+<textarea name="userCoachmeURL" cols="60" placeholder="https://www.coach.me/users/xxxxxxxxxxxxxxxxxxxx//activity"></textarea><br> 
+<input type="submit" name="submit" value="Fetch habits"></p><br>
+</form>
+-->
 
 <form action='#' method='post' name='form'> <!-- <?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> -->
 <?php include 'get_plans.php'; ?><br>
 </form>
 
-<!-- <img src="test.php" alt="Getting closer! :)" width="400" height="20"> it must be PHP or it is not dynamic -->
-
 </body>
-
 </html>
