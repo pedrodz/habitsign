@@ -110,10 +110,10 @@ else{
 
 echo "<p>Had problems finding people to track my habit changes<br>
 So passively I made everyone that receives my emails an accountant<br>
-I am not associated with Coach.me. Feel free to use and share. Thanks! <br><br>
+I am not associated with Coach.me. Feel free to use <br><br>
 <img src='//www.signhabits.com/example.png' style='border:1px dashed'></p>";
 
-echo "<p>Insert your Coach.me profile URL:<br>";
+echo "<p>Log in to Coach.me, go to your profile, and copy-paste URL:<br>";
 echo "<input type='text' name='userCoachmeURL' size='60' placeholder='https://www.coach.me/users/xxxxxxxxxxxxxxxxxxxx//activity'><br>";
 echo "<input type='submit' name='submit' value='Fetch habits'></p><br>";
 
